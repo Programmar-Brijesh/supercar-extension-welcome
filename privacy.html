@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy – Supercar Live Wallpaper 4K</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --cyan: #00e5ff;
+            --deep: #020812;
+            --surface: rgba(10, 20, 40, 0.7);
+            --border: rgba(0, 229, 255, 0.15);
+        }
+        body {
+            background: var(--deep);
+            color: #e0e6f0;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            line-height: 1.7;
+        }
+        .glass-card {
+            background: rgba(5, 12, 30, 0.7);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+        }
+        .text-cyan-gradient {
+            background: linear-gradient(135deg, #00e5ff, #0077ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+        }
+        h1 {
+            border-bottom: 2px solid var(--cyan);
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+        h2 {
+            color: var(--cyan);
+            font-weight: 600;
+            border-left: 4px solid var(--cyan);
+            padding-left: 15px;
+            margin-top: 2.5rem;
+        }
+        code {
+            background: #112233;
+            padding: 2px 8px;
+            border-radius: 5px;
+            color: var(--cyan);
+            font-family: 'Fira Code', monospace;
+        }
+        .date {
+            color: #8899aa;
+            font-style: italic;
+        }
+        a {
+            color: var(--cyan);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        a:hover {
+            color: #33ffff;
+            text-decoration: underline;
+        }
+        .btn-back {
+            border: 1px solid var(--cyan);
+            color: var(--cyan);
+            padding: 8px 24px;
+            border-radius: 50px;
+            transition: 0.3s;
+        }
+        .btn-back:hover {
+            background: var(--cyan);
+            color: #000;
+        }
+        footer {
+            background: rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation back to welcome -->
+<div class="container py-4">
+    <a href="index.html" class="btn btn-back">
+        <i class="bi bi-arrow-left me-2"></i>Back to Welcome
+    </a>
+</div>
+
+<!-- Main content -->
+<div class="container py-2">
+    <div class="glass-card p-4 p-md-5">
+        <h1 class="text-white fw-bold mb-3">
+            🔒 Privacy Policy
+            <span class="text-cyan-gradient">Supercar Live Wallpaper 4K</span>
+        </h1>
+        <p class="date">Last updated: 10 May 2026</p>
+
+        <p>
+            This privacy policy explains how the <strong>"Supercar Live Wallpaper 4K New Tab"</strong> 
+            Chrome extension ("the Extension") handles information. 
+            We are committed to protecting your privacy.
+        </p>
+
+        <h2><i class="bi bi-shield-check me-2"></i>1. Information We Do <strong>Not</strong> Collect</h2>
+        <p>
+            The Extension <strong>does not collect, store, or transmit</strong> any 
+            <strong>personally identifiable information</strong> (such as your name, email, 
+            or browsing history) to any external server. It does not use analytics, 
+            trackers, or remote logging services.
+        </p>
+
+        <h2><i class="bi bi-device-hdd me-2"></i>2. Data Stored Locally on Your Device</h2>
+        <p>
+            To personalise your experience, the Extension stores the following data 
+            <strong>exclusively on your computer</strong> using Chrome’s 
+            <code>localStorage</code> API:
+        </p>
+        <ul>
+            <li>Your preferred display name (driver name)</li>
+            <li>The selected wallpaper video</li>
+            <li>Dashboard widget positions and visibility (clock, stats, search bar, quick-dock)</li>
+            <li>Quick‑dock shortcuts (URLs and icons)</li>
+            <li>Cursor effect preference</li>
+            <li>Voice assistant consent flag</li>
+        </ul>
+        <p>
+            <strong>This data never leaves your device.</strong> It is only used to restore 
+            your settings the next time you open a new tab.
+        </p>
+
+        <h2><i class="bi bi-mic me-2"></i>3. Voice Assistant (Optional)</h2>
+        <p>
+            The Extension includes an optional voice‑control feature, activated by clicking the 
+            <strong>"AI" orb</strong> on the new tab page. When you use the voice assistant:
+        </p>
+        <ul>
+            <li>Your microphone is accessed <strong>only after you click the orb</strong> and you 
+                have given explicit consent.</li>
+            <li>Spoken commands are processed using the <strong>Web Speech API</strong>, 
+                a built‑in browser feature provided by Google Chrome.</li>
+            <li>This API sends your voice data to <strong>Google’s cloud servers</strong> 
+                for speech‑to‑text conversion. This processing is governed by 
+                <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google’s Privacy Policy</a>.</li>
+            <li>The Extension itself <strong>does not record, store, or share</strong> any 
+                audio or transcript. It only uses the text to execute the command 
+                (e.g., “open YouTube”) and then discards it.</li>
+        </ul>
+        <p>
+            If you do not wish to use voice commands, simply do not click the AI orb – 
+            no microphone access is ever requested without your action.
+        </p>
+
+        <h2><i class="bi bi-link-45deg me-2"></i>4. Third‑Party Services</h2>
+        <p>
+            <strong>Website favicons:</strong> When you add a shortcut to the quick‑dock, 
+            the Extension fetches the website’s favicon from 
+            <code>https://www.google.com/s2/favicons</code>. 
+            This request only contains the domain name of the website you saved. 
+            No other information is sent.
+        </p>
+        <p>
+            <strong>Video wallpapers:</strong> All video files are bundled inside the Extension 
+            and load locally; no network requests are made for them.
+        </p>
+
+        <h2><i class="bi bi-bar-chart me-2"></i>5. Data Sharing</h2>
+        <p>
+            We do <strong>not</strong> sell, rent, or share any data with third parties.
+            Since all personal settings are stored locally on your device, we have no
+            access to them.
+        </p>
+
+        <h2><i class="bi bi-sliders me-2"></i>6. Your Control & Data Removal</h2>
+        <p>
+            You can remove all stored data at any time by:
+        </p>
+        <ul>
+            <li>Using the “Reset Dashboard” button in the settings panel (resets layout and dock apps).</li>
+            <li>Clearing the browser’s site data for <code>chrome://newtab</code> (if the new tab page is controlled by the extension).</li>
+            <li>Uninstalling the Extension, which automatically deletes all local storage associated with it.</li>
+        </ul>
+
+        <h2><i class="bi bi-clock-history me-2"></i>7. Changes to This Policy</h2>
+        <p>
+            We may update this privacy policy occasionally. Any changes will be reflected 
+            on this page with a new “Last updated” date.
+        </p>
+
+        <h2><i class="bi bi-envelope me-2"></i>8. Contact</h2>
+        <p>
+            If you have questions or concerns about this privacy policy, please open an issue in our 
+            GitHub repository:
+            <br>
+            <a href="https://github.com/yourusername/supercar-extension/issues" target="_blank" rel="noopener">
+                https://github.com/yourusername/supercar-extension/issues
+            </a>
+        </p>
+        <p class="mt-4 text-secondary">
+            <em>This policy is effective as of 10 May 2026.</em>
+        </p>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="py-4 mt-5 border-top border-dark">
+    <div class="container text-center">
+        <p class="small mb-1">© 2026 Supercar Live Wallpaper 4K. Not affiliated with any car brand.</p>
+        <p class="small text-secondary">
+            Chrome is a trademark of Google LLC.
+            <a href="index.html" class="ms-2">Home</a> · 
+            <a href="privacy.html" class="ms-2">Privacy Policy</a>
+        </p>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supercar Live Wallpaper 4K – New Tab Dashboard</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --cyan: #00e5ff;
+            --deep: #020812;
+            --surface: rgba(10, 20, 40, 0.85);
+            --border: rgba(0, 229, 255, 0.15);
+        }
+        body {
+            background: var(--deep);
+            color: #e0e6f0;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            overflow-x: hidden;
+        }
+        /* Glass card effect */
+        .glass-card {
+            background: rgba(5, 12, 30, 0.7);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            transition: all 0.4s ease;
+        }
+        .glass-card:hover {
+            border-color: var(--cyan);
+            box-shadow: 0 0 30px rgba(0, 229, 255, 0.25);
+            transform: translateY(-6px);
+        }
+        /* Gradient text */
+        .text-cyan-gradient {
+            background: linear-gradient(135deg, #00e5ff, #0077ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+        }
+        /* Hero section */
+        .hero-section {
+            background: radial-gradient(circle at 20% 30%, #001530 0%, #000000 90%);
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%2300e5ff" fill-opacity="0.07" d="M0,224L48,213.3C96,203,192,181,288,186.7C384,192,480,224,576,240C672,256,768,256,864,240C960,224,1056,192,1152,181.3C1248,171,1344,181,1392,186.7L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
+            background-size: cover;
+            pointer-events: none;
+        }
+        .btn-cyan {
+            background: var(--cyan);
+            border: none;
+            color: #000;
+            font-weight: 700;
+            padding: 14px 42px;
+            border-radius: 50px;
+            letter-spacing: 0.5px;
+            transition: all 0.3s;
+            box-shadow: 0 0 25px rgba(0, 229, 255, 0.5);
+        }
+        .btn-cyan:hover {
+            background: #33f0ff;
+            box-shadow: 0 0 45px rgba(0, 229, 255, 0.8);
+            transform: scale(1.05);
+            color: #000;
+        }
+        .btn-outline-cyan {
+            border: 2px solid var(--cyan);
+            color: var(--cyan);
+            font-weight: 600;
+            padding: 12px 36px;
+            border-radius: 50px;
+            transition: 0.3s;
+        }
+        .btn-outline-cyan:hover {
+            background: var(--cyan);
+            color: #000;
+        }
+        /* Feature icons */
+        .icon-cyan {
+            font-size: 2.8rem;
+            display: inline-block;
+            background: linear-gradient(145deg, #00e5ff, #0088cc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .command-badge {
+            background: rgba(0, 229, 255, 0.08);
+            border-left: 3px solid var(--cyan);
+            font-family: 'Fira Code', monospace;
+            font-size: 0.9rem;
+            padding: 5px 14px;
+            border-radius: 0 8px 8px 0;
+        }
+        .cursor-demo {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .cursor-demo span {
+            background: rgba(0,229,255,0.08);
+            border: 1px solid var(--border);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+        .cursor-demo span:hover {
+            border-color: var(--cyan);
+            background: rgba(0,229,255,0.15);
+        }
+        footer a {
+            color: #8a9bb5;
+            text-decoration: none;
+        }
+        footer a:hover {
+            color: var(--cyan);
+        }
+        .divider {
+            width: 80px;
+            height: 4px;
+            background: var(--cyan);
+            margin: 20px auto;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-7 text-center text-lg-start">
+                <h1 class="display-3 fw-bold mb-3">
+                    <span class="text-white">Supercar</span> 
+                    <span class="text-cyan-gradient">Live Wallpaper 4K</span>
+                </h1>
+                <p class="lead mb-4" style="color: #b0c4de; max-width: 600px;">
+                    Every new tab becomes a high‑octane dashboard. 
+                    Stunning 4K video backgrounds, HUD stats, voice commands, and futuristic cursor effects — all in one extension.
+                </p>
+                <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
+                    <a href="#features" class="btn btn-cyan btn-lg">⚡ Explore Features</a>
+                    <a href="#" class="btn btn-outline-cyan btn-lg" target="_blank">
+                        <i class="bi bi-download me-2"></i>Add to Chrome
+                    </a>
+                </div>
+                <p class="mt-3 small" style="color: #6c7a8f;">
+                    <i class="bi bi-shield-check"></i> No sign‑up. Data stays on your device.
+                </p>
+            </div>
+            <div class="col-lg-5 text-center mt-5 mt-lg-0">
+                <!-- Placeholder for a dashboard preview image -->
+                <div class="glass-card p-4 d-inline-block">
+                    <img src="images/preview.png" 
+                         alt="Dashboard preview" class="img-fluid rounded-4" style="max-width: 320px;">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section id="features" class="py-5">
+    <div class="container py-4">
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold text-white">Packed with <span class="text-cyan-gradient">Premium Features</span></h2>
+            <div class="divider"></div>
+            <p class="text-secondary">Everything you need for a futuristic new tab experience.</p>
+        </div>
+
+        <div class="row g-4">
+            <!-- 4K Wallpapers -->
+            <div class="col-md-6 col-lg-3">
+                <div class="glass-card p-4 h-100">
+                    <div class="icon-cyan mb-3"><i class="bi bi-film"></i></div>
+                    <h4 class="text-white">4K Live Wallpapers</h4>
+                    <p class="small">Switch between <strong>Formula Racing</strong> or <strong>Matrix</strong> loops. Buttery‑smooth animated backgrounds every time you open a tab.</p>
+                    <p class="small text-cyan">Settings → Wallpaper dropdown.</p>
+                </div>
+            </div>
+            <!-- Time & Date -->
+            <div class="col-md-6 col-lg-3">
+                <div class="glass-card p-4 h-100">
+                    <div class="icon-cyan mb-3"><i class="bi bi-clock"></i></div>
+                    <h4 class="text-white">Smart Greeting & Clock</h4>
+                    <p class="small">Personalised “Good Morning, Driver” with live clock and date. Your name stays local.</p>
+                </div>
+            </div>
+            <!-- Search Bar -->
+            <div class="col-md-6 col-lg-3">
+                <div class="glass-card p-4 h-100">
+                    <div class="icon-cyan mb-3"><i class="bi bi-search"></i></div>
+                    <h4 class="text-white">Intelligent Search</h4>
+                    <p class="small">Search Google or type any URL – the bar detects addresses automatically.</p>
+                </div>
+            </div>
+            <!-- HUD Stats -->
+            <div class="col-md-6 col-lg-3">
+                <div class="glass-card p-4 h-100">
+                    <div class="icon-cyan mb-3"><i class="bi bi-speedometer2"></i></div>
+                    <h4 class="text-white">Live Performance Stats</h4>
+                    <p class="small">Animated RPM and speed gauges give you that race‑car cockpit feel.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Voice Assistant & Quick Dock -->
+<section class="py-5" style="background: rgba(0,229,255,0.02);">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6">
+                <h2 class="fw-bold text-white mb-4">🎤 Jarvis‑Style <span class="text-cyan-gradient">Voice Control</span></h2>
+                <p>Click the glowing <strong>AI orb</strong> and speak commands. Your voice is processed by Google’s speech‑to‑text (no audio stored).</p>
+                <div class="d-flex flex-wrap gap-2 mb-3">
+                    <span class="command-badge">"Open YouTube"</span>
+                    <span class="command-badge">"Matrix wallpaper"</span>
+                    <span class="command-badge">"Cyber trail"</span>
+                    <span class="command-badge">"Show stats"</span>
+                    <span class="command-badge">"Customize mode"</span>
+                </div>
+                <a href="privacy.html" class="text-cyan small"><i class="bi bi-lock"></i> See privacy details</a>
+            </div>
+            <div class="col-lg-6">
+                <div class="glass-card p-4">
+                    <h4 class="text-cyan mb-3"><i class="bi bi-magnet"></i> Magnetic Quick‑Dock</h4>
+                    <p class="small">Your favourite websites at the bottom with hover lift effect. Add, remove, or reorder shortcuts.</p>
+                    <ul class="list-unstyled small">
+                        <li><i class="bi bi-plus-circle text-cyan me-2"></i> Click <code>+</code> to add apps</li>
+                        <li><i class="bi bi-x-circle text-cyan me-2"></i> Hover & click <code>×</code> to remove</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Cursor Effects -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="fw-bold text-white text-center mb-4">🖱️ Futuristic <span class="text-cyan-gradient">Cursor Effects</span></h2>
+        <div class="d-flex justify-content-center gap-3 flex-wrap cursor-demo">
+            <span>Cyber Trail</span>
+            <span>Neon Particles</span>
+            <span>Matrix Code</span>
+            <span>HUD Ring</span>
+            <span>Lightning Flow</span>
+        </div>
+        <p class="text-center mt-3 text-secondary">Change them via settings or voice command <em>“Neon particles”</em>.</p>
+    </div>
+</section>
+
+<!-- Customization -->
+<section class="py-5" style="background: rgba(0,229,255,0.02);">
+    <div class="container">
+        <h2 class="fw-bold text-white text-center mb-4">🎨 Fully <span class="text-cyan-gradient">Customizable Dashboard</span></h2>
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-4">
+                <div class="glass-card p-4 text-center h-100">
+                    <i class="bi bi-arrows-move icon-cyan mb-3" style="font-size: 2.5rem;"></i>
+                    <h5>Drag & Drop</h5>
+                    <p class="small">Move widgets anywhere using the ⠿ handle in <strong>Customize Mode</strong>.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="glass-card p-4 text-center h-100">
+                    <i class="bi bi-aspect-ratio icon-cyan mb-3" style="font-size: 2.5rem;"></i>
+                    <h5>Resize Widgets</h5>
+                    <p class="small">Pull the right edge of any widget to scale it up or down.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="glass-card p-4 text-center h-100">
+                    <i class="bi bi-toggle-on icon-cyan mb-3" style="font-size: 2.5rem;"></i>
+                    <h5>Toggle Visibility</h5>
+                    <p class="small">Show/hide clock, search, stats, and dock from settings panel.</p>
+                </div>
+            </div>
+        </div>
+        <p class="text-center mt-4">All preferences save automatically and sync across your local browser.</p>
+    </div>
+</section>
+
+<!-- Installation & Privacy -->
+<section class="py-5">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="glass-card p-4 h-100">
+                    <h3 class="text-cyan"><i class="bi bi-download me-2"></i>Installation</h3>
+                    <p>Coming to the <strong>Chrome Web Store</strong>. After installing, simply open a new tab and the dashboard appears instantly. No configuration needed.</p>
+                    <a href="#" class="btn btn-cyan btn-sm disabled">Available Soon</a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="glass-card p-4 h-100">
+                    <h3 class="text-cyan"><i class="bi bi-shield-lock me-2"></i>Privacy & Data</h3>
+                    <p>Everything (name, layout, dock apps) is stored <strong>only on your device</strong>. The optional voice feature uses Google’s speech engine – no audio is recorded.</p>
+                    <a href="privacy.html" class="text-cyan fw-semibold">Read full Privacy Policy →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="py-4 border-top border-dark">
+    <div class="container text-center">
+        <p class="small mb-1">© 2026 Supercar Live Wallpaper 4K. Not affiliated with any car brand.</p>
+        <p class="small text-secondary">Chrome is a trademark of Google LLC. 
+            <a href="privacy.html" class="ms-2">Privacy Policy</a> · 
+            <a href="#" class="ms-2">GitHub</a>
+        </p>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

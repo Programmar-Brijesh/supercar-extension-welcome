@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>We're Sad to See You Go – Supercar Live Wallpaper</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --cyan: #00e5ff;
+            --deep: #020812;
+            --surface: rgba(10, 20, 40, 0.7);
+            --border: rgba(0, 229, 255, 0.15);
+        }
+
+        body {
+            background: var(--deep);
+            color: #e0e6f0;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            line-height: 1.7;
+        }
+
+        .glass-card {
+            background: rgba(5, 12, 30, 0.7);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            transition: 0.4s;
+        }
+
+        .glass-card:hover {
+            border-color: var(--cyan);
+            box-shadow: 0 0 30px rgba(0, 229, 255, 0.2);
+        }
+
+        .text-cyan-gradient {
+            background: linear-gradient(135deg, #00e5ff, #0077ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+        }
+
+        .btn-cyan {
+            background: var(--cyan);
+            border: none;
+            color: #000;
+            font-weight: 700;
+            padding: 14px 42px;
+            border-radius: 50px;
+            letter-spacing: 0.5px;
+            transition: 0.3s;
+            box-shadow: 0 0 25px rgba(0, 229, 255, 0.5);
+        }
+
+        .btn-cyan:hover {
+            background: #33f0ff;
+            box-shadow: 0 0 45px rgba(0, 229, 255, 0.8);
+            transform: scale(1.05);
+            color: #000;
+        }
+
+        .btn-outline-cyan {
+            border: 2px solid var(--cyan);
+            color: var(--cyan);
+            font-weight: 600;
+            padding: 12px 36px;
+            border-radius: 50px;
+            transition: 0.3s;
+        }
+
+        .btn-outline-cyan:hover {
+            background: var(--cyan);
+            color: #000;
+        }
+
+        textarea::placeholder {
+            color: #6c7a8f;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        footer a {
+            color: #8a9bb5;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: var(--cyan);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Hero -->
+    <section class="py-5 text-center">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="glass-card p-4 p-md-5">
+                        <h1 class="display-4 fw-bold text-white mb-3">
+                            😢 We're Sad to See You Go
+                        </h1>
+                        <p class="lead" style="color: #b0c4de;">
+                            Supercar Live Wallpaper is now gone from your new tab. We appreciate you giving it a try.
+                            Your feedback can help us improve.
+                        </p>
+                        <hr class="border-secondary">
+                        <p class="mb-4">
+                            💡 <strong>Changed your mind?</strong> You can always reinstall with one click.
+                        </p>
+                        <a href="#" class="btn btn-cyan btn-lg" target="_blank">
+                            <i class="bi bi-download me-2"></i>Reinstall Extension
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feedback Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="glass-card p-4 p-md-5">
+                        <h3 class="text-cyan-gradient mb-4">
+                            <i class="bi bi-chat-dots me-2"></i>Help Us Improve
+                        </h3>
+                        <p>What made you uninstall? (optional)</p>
+                        <form id="feedbackForm">
+                            <div class="mb-3">
+                                <textarea class="form-control bg-dark text-light border-secondary" id="feedback"
+                                    rows="4"
+                                    placeholder="E.g., 'Too heavy', 'Missing feature X', 'Just testing'..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-outline-cyan w-100">
+                                <i class="bi bi-send me-2"></i>Send Feedback
+                            </button>
+                        </form>
+                        <div id="thankYou" class="mt-3 text-success text-center d-none">
+                            ✅ Thank you! Your feedback means the world to us.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reinstall / Store Link -->
+    <section class="py-3">
+        <div class="container text-center">
+            <p style="color: #6c7a8f;">
+                Or give it another chance later —
+                <a href="#" class="text-cyan fw-semibold" target="_blank">Visit Chrome Web Store</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 border-top border-dark">
+        <div class="container text-center">
+            <p class="small mb-1">© 2026 Supercar Live Wallpaper 4K. Not affiliated with any car brand.</p>
+            <p class="small text-secondary">
+                Chrome is a trademark of Google LLC.
+                <a href="index.html">Home</a> ·
+                <a href="privacy.html">Privacy Policy</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Simple form handler (no backend required) -->
+    <script>
+        document.getElementById('feedbackForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const feedback = document.getElementById('feedback').value.trim();
+            if (feedback) {
+                // In a real scenario, you'd send this to a server or use a service.
+                // For now we just show a thank you message.
+                document.getElementById('thankYou').classList.remove('d-none');
+                document.getElementById('feedback').value = '';
+                // Optional: You could also add a mailto link dynamically
+                // window.location.href = `mailto:youremail@example.com?subject=Uninstall%20Feedback&body=${encodeURIComponent(feedback)}`;
+            }
+        });
+    </script>
+</body>
+
+</html>
