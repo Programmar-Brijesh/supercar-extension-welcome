@@ -24,27 +24,6 @@
 - 🔒 **Privacy First** – All data stored locally; no account needed
 
 
-## 📁 Project Structure
-
-supercar-extension/
-├── manifest.json
-├── newtab.html
-├── newtab.css
-├── newtab.js
-├── assets/
-│ ├── videos/
-│ └── js/
-│ └── interact.min.js
-└── icons/
-├── icon16.png
-├── icon48.png
-└── icon128.png
-
-
-
-
----
-
 ## 🔗 Related Pages
 
 - [Landing Page](https://supercar-extension-welcome.netlify.app)  
